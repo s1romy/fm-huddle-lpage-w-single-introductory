@@ -1,0 +1,208 @@
+/*
+## Colors
+### Primary
+- Purple 700: hsl(257, 40%, 49%)
+- Magenta 400: hsl(300, 69%, 71%)
+
+## Typography
+### Headings
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
+
+:root {
+  --purple: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/bg-desktop.svg);
+  background-color: var(--purple);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: clamp(600px, 85vw, 1300px);
+  padding: 5rem 8rem 2rem;
+  gap: 5rem;
+}
+
+header img {
+  width: 20rem;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+
+.sample-img,
+.desc {
+  flex: 1;
+}
+
+.sample-img img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 0;
+  gap: 2.5rem;
+}
+
+.desc h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.desc p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.register-btn {
+  align-self: flex-start;
+  padding: 1.4rem 0;
+  border: none;
+  border-radius: 50px;
+  width: 18rem;
+  box-shadow: 0 6px 20px hsla(257, 40%, 20%, 0.45);
+  color: var(--purple);
+  background-color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: var(--magenta);
+  color: var(--white);
+  box-shadow: 0 6px 20px hsla(200, 69%, 40%, 0.45);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: clamp(600px, 85vw, 1300px);
+  padding: 0 8rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--magenta);
+  text-decoration: none;
+}
+
+.social-btns {
+  display: flex;
+  gap: 15px;
+}
+
+ion-icon {
+  font-size: 2rem;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    background-size: contain;
+    background-position: top center;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  main {
+    width: 100%;
+    padding: 4rem 3.5rem 2rem;
+    gap: 4rem;
+  }
+
+  header img {
+    width: 15rem;
+  }
+
+  article {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .desc {
+    padding: 0;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .desc h1 {
+    font-size: 2.4rem;
+  }
+
+  .desc p {
+    font-size: 1.6rem;
+  }
+
+  .register-btn {
+    align-self: center;
+    width: 20rem;
+    font-size: 1.6rem;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 3.5rem 3rem;
+    gap: 2rem;
+  }
+}
