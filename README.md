@@ -25,8 +25,8 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://addlinkhere.com)
-- Live Site URL: [GitHub Pages](https://addlinkhere.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/huddle-landing-page-with-single-introductory-section-OfMUYb1kjN)
+- Live Site URL: [GitHub Pages](https://s1romy.github.io/fm-huddle-lpage-w-single-introductory/)
 
 ## My process
 
